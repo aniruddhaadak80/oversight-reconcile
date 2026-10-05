@@ -99,14 +99,26 @@ export const SURFACES: readonly Surface[] = [
   },
 ]
 
+/**
+ * The version, read from whichever package.json is reachable.
+ *
+ * The deployed app is uploaded with `apps/web` as its root, so `../../package.json` does not
+ * exist there and only the app's own manifest resolves. Reporting the root version locally and
+ * the app's version on Vercel would be an honest difference nobody wants; falling back through
+ * both paths and reporting the app's own version in both is one value that never lies about
+ * which build is running.
+ */
 function packageVersion(): string {
-  try {
-    const raw = readFileSync(join(process.cwd(), '..', '..', 'package.json'), 'utf8')
-    const parsed = JSON.parse(raw) as { version?: string }
-    return parsed.version ?? '0.0.0'
-  } catch {
-    return '0.0.0'
+  const candidates = [join(process.cwd(), 'package.json'), join(process.cwd(), '..', '..', 'package.json')]
+  for (const file of candidates) {
+    try {
+      const parsed = JSON.parse(readFileSync(file, 'utf8')) as { version?: string }
+      if (typeof parsed.version === 'string' && parsed.version !== '') return parsed.version
+    } catch {
+      /* try the next candidate */
+    }
   }
+  return 'unknown'
 }
 
 export function resolveVersion(): string {

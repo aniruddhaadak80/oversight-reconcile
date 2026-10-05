@@ -24,7 +24,13 @@ product.config.json
 .env
 .env.local
 .env.*.local
+.env.*
 !.env.example
+
+# Vercel CLI project links. `vercel --prod` writes a `.vercel/project.json` containing
+# project and org ids, and writes a `.env.local` with an OIDC token for local pulls.
+# Neither belongs in the repository, and the second one is a live credential.
+.vercel
 
 *.log
 .DS_Store
