@@ -1,0 +1,13 @@
+{
+  "name": "degenerate-inputs-report-diagnostics",
+  "why": "Unusable input must produce a report with diagnostics, not an exception and not a silent empty tree. A reviewer needs to know the parser gave up and why.",
+  "document": "# Notes\n\n```python\n# we ensure this is not prose\n```\n\nThe team reviews this quarterly.\n\n| claim | status |\n| --- | --- |\n| We ensure X | yes |\n",
+  "obligations": [],
+  "evidence": [],
+  "expect": {
+    "claimCount": 0,
+    "byVerdict": {},
+    "diagnosticCodes": ["NO_CLAIMS"],
+    "claims": {}
+  }
+}

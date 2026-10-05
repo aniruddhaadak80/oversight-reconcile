@@ -1,0 +1,125 @@
+/*
+ * THE SINGLE SOURCE OF COLOUR TRUTH.
+ *
+ * check:theme-tokens fails the build if a raw hex/rgb/hsl literal appears in any other
+ * file under apps/web. If you need a new colour, add it here — nowhere else. This is what
+ * stops a codebase drifting into forty slightly different greys.
+ *
+ * The palette is stone and lime: warm neutral greys with a single acid-green accent. It was
+ * chosen so that a verdict reads as a state rather than as decoration — the accent is
+ * reserved for "this is evidenced", so an unevidenced claim is visibly quiet on purpose.
+ * Radii are sharp (2px) and motion is none, because an oversight artifact that animates is
+ * an oversight artifact you cannot screenshot and diff.
+ */
+
+:root {
+  /* surfaces — warm neutral */
+  --bg: #faf9f7;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #f2f0ec;
+
+  /* content */
+  --fg: #1c1a17;
+  --fg-muted: #5d574e;
+  --fg-subtle: #8b8478;
+
+  /* lines */
+  --border: #e4e0d8;
+  --border-strong: #cdc7ba;
+
+  /* accent — lime, used only for evidenced state */
+  --accent: #5c7c0a;
+  --accent-hover: #4a6608;
+  --accent-fg: #ffffff;
+  --accent-subtle: #eef5dd;
+
+  /* status */
+  --ok: #4c6b12;
+  --ok-subtle: #eef5dd;
+  --warn: #8a5a12;
+  --warn-subtle: #fbf1de;
+  --danger: #a02c1f;
+  --danger-subtle: #fbeae7;
+  --info: #2b5570;
+  --info-subtle: #e8f0f5;
+
+  /* the byte span, marked in the source line */
+  --span-mark: #d9ec9a;
+  --span-mark-fg: #1c1a17;
+
+  /* spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* radii — sharp on purpose */
+  --radius-1: 2px;
+  --radius-2: 3px;
+  --radius-3: 4px;
+  --radius-4: 6px;
+
+  /* elevation */
+  --shadow-1: 0 1px 0 var(--border);
+  --shadow-2: 0 4px 12px rgb(28 26 23 / 8%);
+  --shadow-3: 0 12px 32px rgb(28 26 23 / 14%);
+
+  /* type — Geist paired with Geist Mono */
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+
+  --leading-tight: 1.15;
+  --leading-body: 1.65;
+
+  /* motion — none. The tokens exist so a future surface can opt in deliberately. */
+  --duration-fast: 0ms;
+  --duration-base: 0ms;
+  --ease: linear;
+}
+
+[data-theme='dark'] {
+  --bg: #14130f;
+  --bg-elevated: #1c1b16;
+  --bg-sunken: #0f0e0b;
+
+  --fg: #f5f2ec;
+  --fg-muted: #b8b1a3;
+  --fg-subtle: #8b8478;
+
+  --border: #322f28;
+  --border-strong: #4a463c;
+
+  --accent: #a3c832;
+  --accent-hover: #b8db45;
+  --accent-fg: #14130f;
+  --accent-subtle: #262c11;
+
+  --ok: #a3c832;
+  --ok-subtle: #262c11;
+  --warn: #d9a441;
+  --warn-subtle: #2f2410;
+  --danger: #e8776a;
+  --danger-subtle: #331512;
+  --info: #7fb0cf;
+  --info-subtle: #12212a;
+
+  --span-mark: #4a5c16;
+  --span-mark-fg: #f5f2ec;
+
+  --shadow-1: 0 1px 0 var(--border);
+  --shadow-2: 0 4px 12px rgb(0 0 0 / 45%);
+  --shadow-3: 0 12px 32px rgb(0 0 0 / 60%);
+}

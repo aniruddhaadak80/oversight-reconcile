@@ -1,0 +1,12 @@
+{
+  "name": "eu-ai-act",
+  "version": "1.0.0",
+  "description": "Obligation pack for the EU AI Act transparency, oversight and data-governance duties.",
+  "enabled": true,
+  "priority": 80,
+  "capabilities": ["obligation-pack.eu-ai-act", "obligation-pack"],
+  "obligations": "obligations.json",
+  "engines": {
+    "@oversightreconcile/core": "0.1.0"
+  }
+}

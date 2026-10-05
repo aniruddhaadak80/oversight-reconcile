@@ -1,0 +1,128 @@
+[
+  {
+    "id": "EV-MERIDIAN-POLICY",
+    "obligationId": "EU-ART-11-TECH-DOC",
+    "locator": "/policies/credit-limit-v4",
+    "sha256": "0f2a4c1d9e7b63a58d0c4b1f2a9e6d3c5b8a7f0e1d2c3b4a5968778695a4b3c2",
+    "kind": "document"
+  },
+  {
+    "id": "EV-MERIDIAN-DPO",
+    "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+    "locator": "artifacts/meridian-dpo-2026-03.pdf",
+    "sha256": "7b1e9d4c3a2f5061728394a5b6c7d8e9f0a1b2c3d4e5f60718293a4b5c6d7e8f",
+    "kind": "document"
+  },
+  {
+    "id": "EV-MERIDIAN-HR",
+    "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+    "locator": "/policies/credit-limit-v4#human-oversight",
+    "sha256": "1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+    "kind": "document"
+  },
+  {
+    "id": "EV-MERIDIAN-APPEAL",
+    "obligationId": "EU-ART-15-APPEAL",
+    "locator": "/policies/credit-limit-v4#redress",
+    "sha256": "2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a",
+    "kind": "document"
+  },
+  {
+    "id": "EV-MERIDIAN-SUBGROUP-Q1",
+    "obligationId": "EU-ART-9-METRICS",
+    "locator": "artifacts/meridian-subgroup-2026-q1.csv",
+    "sha256": "3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b",
+    "kind": "document"
+  },
+  {
+    "id": "EV-MERIDIAN-SUBGROUP-Q2",
+    "obligationId": "EU-ART-9-METRICS",
+    "locator": "artifacts/meridian-subgroup-2026-q2.csv",
+    "sha256": "4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-INTRO",
+    "obligationId": "EU-ART-10-DATA-GOV",
+    "locator": "/policies/support-intake",
+    "sha256": "5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-NO-TRAIN",
+    "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+    "locator": "artifacts/northwind-dpo-2026-01.pdf",
+    "sha256": "6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-HR",
+    "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+    "locator": "/policies/support-classification#human-oversight",
+    "sha256": "708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-APPEAL",
+    "obligationId": "EU-ART-15-APPEAL",
+    "locator": "/policies/support-classification#redress",
+    "sha256": "8192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f70",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-LOG",
+    "obligationId": "EU-ART-11-RECORD-KEEPING",
+    "locator": "/policies/support-classification#retention",
+    "sha256": "92a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f7081",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-SUBGROUP-Q1",
+    "obligationId": "EU-ART-9-METRICS",
+    "locator": "artifacts/northwind-subgroup-2026-q1.csv",
+    "sha256": "a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-SUBGROUP-Q2",
+    "obligationId": "EU-ART-9-METRICS",
+    "locator": "artifacts/northwind-subgroup-2026-q2.csv",
+    "sha256": "b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a3b4c5d6e7f708192a3",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-AUDIT",
+    "obligationId": "NIST-MANAGE-4.1",
+    "locator": "artifacts/northwind-audit-trail-2026.pdf",
+    "sha256": "c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-DRIFT-Q2",
+    "obligationId": "NIST-MANAGE-2.4",
+    "locator": "runs/drift-monitor-2026-q2",
+    "sha256": "d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5",
+    "kind": "run"
+  },
+  {
+    "id": "EV-NORTHWIND-FAIRNESS-Q1",
+    "obligationId": "NIST-MEASURE-2.7",
+    "locator": "artifacts/northwind-fairness-2026-q1.pdf",
+    "sha256": "e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-FAIRNESS-Q2",
+    "obligationId": "NIST-MEASURE-2.7",
+    "locator": "artifacts/northwind-fairness-2026-q2.pdf",
+    "sha256": "f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7",
+    "kind": "document"
+  },
+  {
+    "id": "EV-NORTHWIND-CONSENT",
+    "obligationId": "NIST-MANAGE-2.2",
+    "locator": "/policies/support-classification#consent",
+    "sha256": "091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8",
+    "kind": "document"
+  }
+]

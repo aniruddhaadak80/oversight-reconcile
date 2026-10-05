@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+coverage
+.turbo
+package-lock.json
+services/engine/.venv
+services/engine/tests/golden
+CHANGELOG.md
+apps/web/content/oversight/latest.json

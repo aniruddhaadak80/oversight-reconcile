@@ -1,0 +1,76 @@
+{
+  "name": "oversight-reconcile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Oversight Reconcile Ã¢â‚¬â€ A self-hosted agent product with a deterministic core.",
+  "license": "MIT",
+  "author": "aniruddhaadak80",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aniruddhaadak80/oversight-reconcile.git"
+  },
+  "homepage": "https://github.com/aniruddhaadak80/oversight-reconcile",
+  "bugs": {
+    "url": "https://github.com/aniruddhaadak80/oversight-reconcile/issues"
+  },
+  "type": "module",
+  "packageManager": "npm@11.21.0",
+  "engines": {
+    "node": "\u003e=22.12.0",
+    "npm": "\u003e=10"
+  },
+  "allowScripts": {
+    "better-sqlite3": true,
+    "esbuild": true
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/web"
+  ],
+  "scripts": {
+    "prepare": "prettier --write .",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "dev": "turbo run dev --parallel",
+    "check:skill-version": "node scripts/check-skill-version.mjs",
+    "check:no-secrets": "node scripts/check-no-secrets.mjs",
+    "check:theme-tokens": "node scripts/check-theme-tokens.mjs",
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "check:public-hygiene": "node scripts/check-public-hygiene.mjs",
+    "check:readme-commands": "node scripts/check-readme-commands.mjs",
+    "lint:python": "python -m ruff check services/engine",
+    "format:check:python": "python -m ruff format --check services/engine",
+    "typecheck:python": "python -m mypy --strict services/engine/src",
+    "evals": "node evals/run.mjs",
+    "report": "node packages/cli/dist/bin.js report",
+    "prove:mcp": "node scripts/prove-mcp.mjs",
+    "pytest": "python -m pytest services/engine -q",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run check:skill-version && npm run check:no-secrets && npm run check:theme-tokens && npm run check:boundaries && npm run check:public-hygiene && npm run check:readme-commands && npm run lint:python && npm run format:check:python && npm run typecheck:python && npm test && npm run pytest && npm run build && npm run evals && npm run prove:mcp",
+    "release": "node scripts/release.mjs"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "mcp",
+    "cli",
+    "typescript",
+    "python",
+    "self-hosted"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.39.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.0",
+    "turbo": "^2.11.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^3.2.4"
+  }
+}

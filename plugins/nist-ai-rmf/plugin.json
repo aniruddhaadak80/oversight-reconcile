@@ -1,0 +1,12 @@
+{
+  "name": "nist-ai-rmf",
+  "version": "1.0.0",
+  "description": "Obligation pack for the NIST AI Risk Management Framework's GOVERN, MAP, MEASURE and MANAGE functions.",
+  "enabled": true,
+  "priority": 60,
+  "capabilities": ["obligation-pack.nist-ai-rmf"],
+  "obligations": "obligations.json",
+  "engines": {
+    "@oversightreconcile/core": "0.1.0"
+  }
+}

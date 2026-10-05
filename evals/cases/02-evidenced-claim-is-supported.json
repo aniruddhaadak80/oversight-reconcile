@@ -1,0 +1,40 @@
+{
+  "name": "evidenced-claim-is-supported",
+  "why": "The happy path must be provable too: a claim with a governing obligation and enough artifacts on record is supported, and nothing else is invented.",
+  "document": "# Triage Card\n\n## Oversight\n\nHuman review is available for every adverse decision.\n",
+  "obligations": [
+    {
+      "id": "O-HUMAN",
+      "code": "Art. 14",
+      "source": "EU AI Act",
+      "statement": "high-risk systems must be effectively overseen by natural persons",
+      "kind": "oversight",
+      "cues": ["oversight.human-review"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-1",
+      "obligationId": "O-HUMAN",
+      "locator": "/policy#human-oversight",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "document"
+    }
+  ],
+  "expect": {
+    "claimCount": 1,
+    "byVerdict": { "supported": 1, "unmet": 0, "unevidenced": 0, "contradicted": 0, "unbacked": 0 },
+    "claims": {
+      "Human review is available": {
+        "kind": "oversight",
+        "polarity": "affirmed",
+        "subject": "human review",
+        "line": 5,
+        "column": 1
+      }
+    }
+  }
+}

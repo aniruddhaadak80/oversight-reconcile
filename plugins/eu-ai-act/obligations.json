@@ -1,0 +1,172 @@
+{
+  "framework": "EU AI Act",
+  "version": "1.0.0",
+  "description": "Machine-checkable reading of the transparency, human-oversight, data-governance and record-keeping duties that a deployer of a high-risk AI system actually has to evidence. Article references are the deployer's own mapping and are reviewed by counsel, not by this tool.",
+  "obligations": [
+    {
+      "id": "EU-ART-9-RISK-MGMT",
+      "code": "Art. 9",
+      "source": "EU AI Act",
+      "statement": "risk management must be continuous across the system lifecycle",
+      "kind": "commitment",
+      "cues": ["commitment.monitor", "commitment.review"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-10-DATA-GOV",
+      "code": "Art. 10",
+      "source": "EU AI Act",
+      "statement": "training data governance must be documented and demonstrable",
+      "kind": "disclosure",
+      "cues": ["disclosure.documented", "disclosure.publish"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "code": "Art. 10(5)",
+      "source": "EU AI Act",
+      "statement": "special-category personal data must not be used for training without an Article 9(2) derogation",
+      "kind": "any",
+      "cues": ["exclusion.never", "exclusion.do-not", "commitment.retain"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-11-TECH-DOC",
+      "code": "Art. 11(1)",
+      "source": "EU AI Act",
+      "statement": "technical documentation must exist before the system is placed on the market",
+      "kind": "disclosure",
+      "cues": ["disclosure.documented"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-11-RECORD-KEEPING",
+      "code": "Art. 11(1)(e)",
+      "source": "EU AI Act",
+      "statement": "automatically generated logs must be retained for the declared period",
+      "kind": "retention",
+      "cues": ["commitment.retain", "commitment.retention", "commitment.retention-period"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-12-RECORD-KEEPING-PERIOD",
+      "code": "Art. 12",
+      "source": "EU AI Act",
+      "statement": "the retention period for logs must be stated and bounded",
+      "kind": "retention",
+      "cues": ["commitment.retention", "commitment.retention-period", "commitment.retain"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "EU-ART-13-TRANSPARENCY",
+      "code": "Art. 13",
+      "source": "EU AI Act",
+      "statement": "instructions for use must disclose the system's capabilities and limitations",
+      "kind": "disclosure",
+      "cues": ["disclosure.publish", "disclosure.documented", "disclosure.disclose"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "EU-ART-14-HUMAN-OVERSIGHT",
+      "code": "Art. 14(1)",
+      "source": "EU AI Act",
+      "statement": "high-risk systems must be effectively overseen by natural persons",
+      "kind": "oversight",
+      "cues": ["oversight.human-oversight", "oversight.human-review"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-14-OVERRIDE",
+      "code": "Art. 14(4)(e)",
+      "source": "EU AI Act",
+      "statement": "the oversight person must be able to stop the system or override its output",
+      "kind": "commitment",
+      "cues": ["commitment.review", "commitment.monitor", "oversight.human-review"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-14-DRIFT",
+      "code": "Art. 14(4)(b)",
+      "source": "EU AI Act",
+      "statement": "oversight must cover the system's accuracy and drift",
+      "kind": "metric",
+      "cues": ["performance.accuracy", "commitment.monitor", "metric.subgroup"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "EU-ART-15-APPEAL",
+      "code": "Art. 15(1)(h)",
+      "source": "EU AI Act",
+      "statement": "the human oversight measures must include a route for affected persons to contest a decision",
+      "kind": "redress",
+      "cues": ["oversight.appeal", "oversight.human-oversight"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-26-DEPLOYER-DUTY",
+      "code": "Art. 26(5)",
+      "source": "EU AI Act",
+      "statement": "a deployer must assign human oversight to competent, trained and resourced persons",
+      "kind": "commitment",
+      "cues": ["commitment.review", "oversight.human-oversight"],
+      "evidenceRequired": 1,
+      "evidenceKind": "manual",
+      "severity": "major"
+    },
+    {
+      "id": "EU-ART-27-FUNDAMENTAL-RIGHTS",
+      "code": "Art. 27",
+      "source": "EU AI Act",
+      "statement": "a fundamental-rights impact assessment must accompany the deployment",
+      "kind": "disclosure",
+      "cues": ["disclosure.documented", "disclosure.disclose"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-86-EXPLANATION",
+      "code": "Art. 86",
+      "source": "EU AI Act",
+      "statement": "affected persons must receive a clear explanation of the role of the system in the decision",
+      "kind": "transparency",
+      "cues": ["transparency.explainability", "transparency.interpretability"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    },
+    {
+      "id": "EU-ART-9-METRICS",
+      "code": "Art. 9(8)",
+      "source": "EU AI Act",
+      "statement": "subgroup performance must be measured where such metrics exist",
+      "kind": "metric",
+      "cues": ["metric.subgroup", "metric.disparate-impact", "performance.measure"],
+      "evidenceRequired": 2,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "parse": {
+    "claims": [
+      {
+        "cues": [
+          "disclosure.publish"
+        ],
+        "depth": 1,
+        "id": "c1",
+        "kind": "disclosure",
+        "parentId": null,
+        "polarity": "affirmed",
+        "quote": "We publish the decision",
+        "section": "Meridian Lending — System Card",
+        "span": {
+          "byteEnd": 121,
+          "byteStart": 98,
+          "column": 63,
+          "line": 3
+        },
+        "subject": "disclosure"
+      },
+      {
+        "cues": [
+          "exclusion.never"
+        ],
+        "depth": 2,
+        "id": "c2",
+        "kind": "exclusion",
+        "parentId": "c1",
+        "polarity": "denied",
+        "quote": "Data sources are listed in appendix A. We never train on applicant-uploaded documents.",
+        "section": "Meridian Lending — System Card › Data and training",
+        "span": {
+          "byteEnd": 270,
+          "byteStart": 184,
+          "column": 3,
+          "line": 8
+        },
+        "subject": "Data sources are listed in appendix A."
+      },
+      {
+        "cues": [
+          "commitment.retain"
+        ],
+        "depth": 2,
+        "id": "c3",
+        "kind": "retention",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "We retain application events for 2555 days.",
+        "section": "Meridian Lending — System Card › Data and training",
+        "span": {
+          "byteEnd": 316,
+          "byteStart": 273,
+          "column": 3,
+          "line": 9
+        },
+        "subject": "retention"
+      },
+      {
+        "cues": [
+          "oversight.human-review"
+        ],
+        "depth": 2,
+        "id": "c4",
+        "kind": "oversight",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "Human review is available for every adverse decision within two business days.",
+        "section": "Meridian Lending — System Card › Human oversight",
+        "span": {
+          "byteEnd": 416,
+          "byteStart": 338,
+          "column": 1,
+          "line": 13
+        },
+        "subject": "human review"
+      },
+      {
+        "cues": [
+          "commitment.monitor"
+        ],
+        "depth": 2,
+        "id": "c5",
+        "kind": "commitment",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "We monitor override rates monthly.",
+        "section": "Meridian Lending — System Card › Human oversight",
+        "span": {
+          "byteEnd": 451,
+          "byteStart": 417,
+          "column": 1,
+          "line": 14
+        },
+        "subject": "monitoring"
+      },
+      {
+        "cues": [
+          "oversight.appeal"
+        ],
+        "depth": 2,
+        "id": "c6",
+        "kind": "redress",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "An appeal is available for 30 days after a decision.",
+        "section": "Meridian Lending — System Card › Redress",
+        "span": {
+          "byteEnd": 517,
+          "byteStart": 465,
+          "column": 1,
+          "line": 18
+        },
+        "subject": "appeal"
+      },
+      {
+        "cues": [
+          "oversight.opt-out"
+        ],
+        "depth": 2,
+        "id": "c7",
+        "kind": "redress",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "Opt out is available in settings.",
+        "section": "Meridian Lending — System Card › Redress",
+        "span": {
+          "byteEnd": 551,
+          "byteStart": 518,
+          "column": 54,
+          "line": 18
+        },
+        "subject": "opt-out"
+      },
+      {
+        "cues": [
+          "transparency.explainability"
+        ],
+        "depth": 2,
+        "id": "c8",
+        "kind": "transparency",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "Explainability is available as a per-decision reason code.",
+        "section": "Meridian Lending — System Card › Transparency",
+        "span": {
+          "byteEnd": 628,
+          "byteStart": 570,
+          "column": 1,
+          "line": 22
+        },
+        "subject": "explainability"
+      },
+      {
+        "cues": [
+          "metric.subgroup",
+          "performance.measure"
+        ],
+        "depth": 2,
+        "id": "c9",
+        "kind": "metric",
+        "parentId": "c1",
+        "polarity": "affirmed",
+        "quote": "We measure subgroup disparity",
+        "section": "Meridian Lending — System Card › Transparency",
+        "span": {
+          "byteEnd": 658,
+          "byteStart": 629,
+          "column": 60,
+          "line": 22
+        },
+        "subject": "measurement"
+      },
+      {
+        "cues": [
+          "exclusion.do-not",
+          "oversight.appeal"
+        ],
+        "depth": 2,
+        "id": "c10",
+        "kind": "exclusion",
+        "parentId": "c1",
+        "polarity": "denied",
+        "quote": "We do not offer an appeal route for automated identity checks.",
+        "section": "Meridian Lending — System Card › Known limitations",
+        "span": {
+          "byteEnd": 765,
+          "byteStart": 703,
+          "column": 1,
+          "line": 27
+        },
+        "subject": "exclusion"
+      }
+    ],
+    "counts": {
+      "byKind": {
+        "commitment": 1,
+        "disclosure": 1,
+        "exclusion": 2,
+        "metric": 1,
+        "oversight": 1,
+        "redress": 2,
+        "retention": 1,
+        "transparency": 1
+      },
+      "byPolarity": {
+        "affirmed": 8,
+        "denied": 2
+      },
+      "total": 10
+    },
+    "diagnostics": [
+      {
+        "code": "NON_ASCII",
+        "line": 1,
+        "message": "document contains non-ASCII characters, so byte offsets differ from character offsets"
+      }
+    ],
+    "digest": "ef61d68f653391dcd130f7249687c736d2b52203f3d2bfff27c93f26ed193885",
+    "lexiconVersion": "1.0.0",
+    "maxDepthReached": 2,
+    "sections": [
+      "Meridian Lending — System Card",
+      "Meridian Lending — System Card › Data and training",
+      "Meridian Lending — System Card › Human oversight",
+      "Meridian Lending — System Card › Redress",
+      "Meridian Lending — System Card › Transparency",
+      "Meridian Lending — System Card › Known limitations"
+    ],
+    "truncated": false
+  },
+  "reconcile": {
+    "counts": {
+      "blocking": 6,
+      "bySeverity": {
+        "blocker": 8,
+        "major": 3,
+        "minor": 0
+      },
+      "byVerdict": {
+        "contradicted": 5,
+        "supported": 2,
+        "unbacked": 0,
+        "unevidenced": 3,
+        "unmet": 1
+      },
+      "claims": 10,
+      "evidence": 5,
+      "obligations": 8,
+      "verdicts": 11
+    },
+    "digest": "b3236faa544a2a771f1a4c81a07a825670d939b354eaca93321351f5bdf8577d",
+    "rulesVersion": "1.0.0",
+    "unmatchedObligationIds": [
+      "O-RETENTION"
+    ],
+    "verdicts": [
+      {
+        "claimId": "c1",
+        "obligationId": "O-PUBLISH",
+        "reasons": [
+          {
+            "code": "EVIDENCE_SUFFICIENT",
+            "detail": "1 document artifact(s) on record, 1 required"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "supported"
+      },
+      {
+        "claimId": "c10",
+        "obligationId": "O-APPEAL",
+        "reasons": [
+          {
+            "code": "SELF_CONTRADICTION",
+            "detail": "the same document both affirms and denies 'an appeal route must exist'; conflicting claims: c6, c7"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "contradicted"
+      },
+      {
+        "claimId": "c2",
+        "obligationId": "O-NO-TRAIN",
+        "reasons": [
+          {
+            "code": "SELF_CONTRADICTION",
+            "detail": "the same document both affirms and denies 'special-category data must not be used for training'; conflicting claims: c3"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "contradicted"
+      },
+      {
+        "claimId": "c3",
+        "obligationId": "O-NO-TRAIN",
+        "reasons": [
+          {
+            "code": "SELF_CONTRADICTION",
+            "detail": "the same document both affirms and denies 'special-category data must not be used for training'; conflicting claims: c2"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "contradicted"
+      },
+      {
+        "claimId": "c4",
+        "obligationId": "O-HUMAN-REVIEW",
+        "reasons": [
+          {
+            "code": "EVIDENCE_SUFFICIENT",
+            "detail": "1 document artifact(s) on record, 1 required"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "supported"
+      },
+      {
+        "claimId": "c5",
+        "obligationId": "O-OVERRIDE",
+        "reasons": [
+          {
+            "code": "EVIDENCE_SHORTFALL",
+            "detail": "'override rates must be monitored' needs 1 document artifact(s); 0 on record"
+          }
+        ],
+        "severity": "major",
+        "verdict": "unevidenced"
+      },
+      {
+        "claimId": "c6",
+        "obligationId": "O-APPEAL",
+        "reasons": [
+          {
+            "code": "SELF_CONTRADICTION",
+            "detail": "the same document both affirms and denies 'an appeal route must exist'; conflicting claims: c10"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "contradicted"
+      },
+      {
+        "claimId": "c7",
+        "obligationId": "O-APPEAL",
+        "reasons": [
+          {
+            "code": "SELF_CONTRADICTION",
+            "detail": "the same document both affirms and denies 'an appeal route must exist'; conflicting claims: c10"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "contradicted"
+      },
+      {
+        "claimId": "c8",
+        "obligationId": "O-EXPLAIN",
+        "reasons": [
+          {
+            "code": "EVIDENCE_SHORTFALL",
+            "detail": "'reason codes must be explainable per decision' needs 1 document artifact(s); 0 on record"
+          }
+        ],
+        "severity": "major",
+        "verdict": "unevidenced"
+      },
+      {
+        "claimId": "c9",
+        "obligationId": "O-SUBGROUP",
+        "reasons": [
+          {
+            "code": "EVIDENCE_SHORTFALL",
+            "detail": "'subgroup performance must be measured' needs 2 document artifact(s); 1 on record"
+          }
+        ],
+        "severity": "blocker",
+        "verdict": "unevidenced"
+      },
+      {
+        "claimId": null,
+        "obligationId": "O-RETENTION",
+        "reasons": [
+          {
+            "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+            "detail": "nothing in the documents addresses 'log retention must be declared and bounded'"
+          }
+        ],
+        "severity": "major",
+        "verdict": "unmet"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1454 @@
+{
+  "generatedBy": "oversight-reconcile report",
+  "engine": "oversight_reconcile/0.1.0",
+  "rulesVersion": "1.0.0",
+  "lexiconVersion": "1.0.0",
+  "treeDigest": "3aa5d7980bb1b79b821cc126e924b7834dbe99a6a6b9a41b5638e2790f3e86f5",
+  "reportDigest": "218a5eec2d101eff348f830187ce0a7a1170c04a8ea3afae719b9119b1a5c42f",
+  "counts": {
+    "verdicts": 36,
+    "claims": 20,
+    "obligations": 27,
+    "evidence": 18,
+    "byVerdict": {
+      "contradicted": 0,
+      "supported": 14,
+      "unbacked": 1,
+      "unevidenced": 5,
+      "unmet": 16
+    },
+    "bySeverity": {
+      "blocker": 19,
+      "major": 17,
+      "minor": 0
+    },
+    "blocking": 7
+  },
+  "frameworks": [
+    {
+      "plugin": "eu-ai-act",
+      "framework": "EU AI Act",
+      "version": "1.0.0",
+      "obligations": 15
+    },
+    {
+      "plugin": "nist-ai-rmf",
+      "framework": "NIST AI RMF 1.0",
+      "version": "1.0.0",
+      "obligations": 12
+    }
+  ],
+  "obligations": [
+    {
+      "id": "EU-ART-10-DATA-GOV",
+      "code": "Art. 10",
+      "source": "EU AI Act",
+      "statement": "training data governance must be documented and demonstrable",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "disclosure.documented",
+        "disclosure.publish"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "code": "Art. 10(5)",
+      "source": "EU AI Act",
+      "statement": "special-category personal data must not be used for training without an Article 9(2) derogation",
+      "kind": "any",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "exclusion.never",
+        "exclusion.do-not",
+        "commitment.retain"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-11-RECORD-KEEPING",
+      "code": "Art. 11(1)(e)",
+      "source": "EU AI Act",
+      "statement": "automatically generated logs must be retained for the declared period",
+      "kind": "retention",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "commitment.retain",
+        "commitment.retention",
+        "commitment.retention-period"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-11-TECH-DOC",
+      "code": "Art. 11(1)",
+      "source": "EU AI Act",
+      "statement": "technical documentation must exist before the system is placed on the market",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "disclosure.documented"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-12-RECORD-KEEPING-PERIOD",
+      "code": "Art. 12",
+      "source": "EU AI Act",
+      "statement": "the retention period for logs must be stated and bounded",
+      "kind": "retention",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "commitment.retention",
+        "commitment.retention-period",
+        "commitment.retain"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-13-TRANSPARENCY",
+      "code": "Art. 13",
+      "source": "EU AI Act",
+      "statement": "instructions for use must disclose the system's capabilities and limitations",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "disclosure.publish",
+        "disclosure.documented",
+        "disclosure.disclose"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-14-DRIFT",
+      "code": "Art. 14(4)(b)",
+      "source": "EU AI Act",
+      "statement": "oversight must cover the system's accuracy and drift",
+      "kind": "metric",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "performance.accuracy",
+        "commitment.monitor",
+        "metric.subgroup"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-14-HUMAN-OVERSIGHT",
+      "code": "Art. 14(1)",
+      "source": "EU AI Act",
+      "statement": "high-risk systems must be effectively overseen by natural persons",
+      "kind": "oversight",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "oversight.human-oversight",
+        "oversight.human-review"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-14-OVERRIDE",
+      "code": "Art. 14(4)(e)",
+      "source": "EU AI Act",
+      "statement": "the oversight person must be able to stop the system or override its output",
+      "kind": "commitment",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "commitment.review",
+        "commitment.monitor",
+        "oversight.human-review"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-15-APPEAL",
+      "code": "Art. 15(1)(h)",
+      "source": "EU AI Act",
+      "statement": "the human oversight measures must include a route for affected persons to contest a decision",
+      "kind": "redress",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "oversight.appeal",
+        "oversight.human-oversight"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-26-DEPLOYER-DUTY",
+      "code": "Art. 26(5)",
+      "source": "EU AI Act",
+      "statement": "a deployer must assign human oversight to competent, trained and resourced persons",
+      "kind": "commitment",
+      "evidenceRequired": 1,
+      "evidenceKind": "manual",
+      "severity": "major",
+      "cues": [
+        "commitment.review",
+        "oversight.human-oversight"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-27-FUNDAMENTAL-RIGHTS",
+      "code": "Art. 27",
+      "source": "EU AI Act",
+      "statement": "a fundamental-rights impact assessment must accompany the deployment",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "disclosure.documented",
+        "disclosure.disclose"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-86-EXPLANATION",
+      "code": "Art. 86",
+      "source": "EU AI Act",
+      "statement": "affected persons must receive a clear explanation of the role of the system in the decision",
+      "kind": "transparency",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "transparency.explainability",
+        "transparency.interpretability"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-9-METRICS",
+      "code": "Art. 9(8)",
+      "source": "EU AI Act",
+      "statement": "subgroup performance must be measured where such metrics exist",
+      "kind": "metric",
+      "evidenceRequired": 2,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "metric.subgroup",
+        "metric.disparate-impact",
+        "performance.measure"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "EU-ART-9-RISK-MGMT",
+      "code": "Art. 9",
+      "source": "EU AI Act",
+      "statement": "risk management must be continuous across the system lifecycle",
+      "kind": "commitment",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker",
+      "cues": [
+        "commitment.monitor",
+        "commitment.review"
+      ],
+      "origin": "EU AI Act 1.0.0"
+    },
+    {
+      "id": "NIST-GOV-1.1",
+      "code": "GOVERN 1.1",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must publish the policies, processes and accountability structures for AI risk",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "disclosure.publish",
+        "disclosure.documented"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-GOV-3.2",
+      "code": "GOVERN 3.2",
+      "source": "NIST AI RMF",
+      "statement": "a policy must require the documentation of the provenance of training data",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "disclosure.documented",
+        "disclosure.publish"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-GOV-4.1",
+      "code": "GOVERN 4.1",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must audit the accountability structures it claims to have",
+      "kind": "commitment",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "commitment.audit",
+        "commitment.review"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MANAGE-2.2",
+      "code": "MANAGE 2.2",
+      "source": "NIST AI RMF",
+      "statement": "mechanisms for user recourse must be planned, documented and available",
+      "kind": "redress",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "oversight.appeal",
+        "oversight.opt-out"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MANAGE-2.3",
+      "code": "MANAGE 2.3",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must decide and document retention for the records it keeps",
+      "kind": "retention",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "commitment.retain",
+        "commitment.retention",
+        "commitment.retention-period"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MANAGE-2.4",
+      "code": "MANAGE 2.4",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must monitor deployed systems for drift and unexpected behaviour",
+      "kind": "commitment",
+      "evidenceRequired": 1,
+      "evidenceKind": "run",
+      "severity": "major",
+      "cues": [
+        "commitment.monitor",
+        "performance.accuracy"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MANAGE-4.1",
+      "code": "MANAGE 4.1",
+      "source": "NIST AI RMF",
+      "statement": "post-deployment monitoring must be recorded in an auditable log",
+      "kind": "accountability",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "accountability.audit-log",
+        "accountability.audit-trail",
+        "commitment.audit"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MAP-1.1",
+      "code": "MAP 1.1",
+      "source": "NIST AI RMF",
+      "statement": "the intended purpose and the context of use must be documented",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "disclosure.documented",
+        "disclosure.publish"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MAP-2.3",
+      "code": "MAP 2.3",
+      "source": "NIST AI RMF",
+      "statement": "scientific integrity requires that system limitations be disclosed, not omitted",
+      "kind": "disclosure",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "disclosure.disclose",
+        "disclosure.publish"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MEASURE-2.11",
+      "code": "MEASURE 2.11",
+      "source": "NIST AI RMF",
+      "statement": "explainability must be evaluated for the intended audience, not merely implemented",
+      "kind": "transparency",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "transparency.explainability",
+        "transparency.interpretability"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MEASURE-2.5",
+      "code": "MEASURE 2.5",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must document that evaluation methods are appropriate to the stated risk",
+      "kind": "metric",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "performance.measure",
+        "performance.accuracy"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    },
+    {
+      "id": "NIST-MEASURE-2.7",
+      "code": "MEASURE 2.7",
+      "source": "NIST AI RMF",
+      "statement": "fairness assessment must be documented for affected populations",
+      "kind": "fairness",
+      "evidenceRequired": 2,
+      "evidenceKind": "document",
+      "severity": "major",
+      "cues": [
+        "fairness.fairness",
+        "fairness.bias",
+        "metric.subgroup"
+      ],
+      "origin": "NIST AI RMF 1.0 1.0.0"
+    }
+  ],
+  "documents": [
+    {
+      "id": "northwind-fairness-policy-cbe85d6003",
+      "path": "docs/policy/northwind-fairness-policy.md",
+      "sha256": "d95f246d5fa15b6c13d7ae927efb03130c6a59be8b1befd6e6b53e856fcf0470",
+      "bytes": 931,
+      "lines": 35,
+      "body": "# Northwind Support — Fairness and Access Policy\n\nNorthwind classifies inbound support tickets. This policy covers the model that does it.\n\n## Data provenance\n\nData sources are listed in /policies/support-intake. We do not train on ticket bodies\nwritten by customers.\n\n## Retention\n\nWe retain ticket transcripts for 400 days. Retention period for audit logs is 400 days.\n\n## Human oversight\n\nHuman review is available on request for any classification a customer disputes.\nWe review monthly samples for consistency.\n\n## Consent and redress\n\nAn appeal is available for 60 days. Consent is required before a transcript is used for\ntraining.\n\n## Accountability\n\nAn audit trail of every classification is available to the internal audit team.\n\n## Fairness\n\nWe monitor subgroup disparity across language, region and account age.\n\n## Transparency\n\nInterpretability is not currently available to customers; we document this limitation.\n"
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb",
+      "path": "docs/policy/meridian-system-card.md",
+      "sha256": "84886b856ea1ac51cbf444732297a606f41f75896dcbd23170c58a0d1db7db0b",
+      "bytes": 766,
+      "lines": 28,
+      "body": "# Meridian Lending — System Card\n\nMeridian decides credit-limit changes for existing customers. We publish the decision\npolicy at /policies/credit-limit-v4.\n\n## Data and training\n\n- Data sources are listed in appendix A. We never train on applicant-uploaded documents.\n- We retain application events for 2555 days.\n\n## Human oversight\n\nHuman review is available for every adverse decision within two business days.\nWe monitor override rates monthly.\n\n## Redress\n\nAn appeal is available for 30 days after a decision. Opt out is available in settings.\n\n## Transparency\n\nExplainability is available as a per-decision reason code. We measure subgroup disparity\nacross four cohorts.\n\n## Known limitations\n\nWe do not offer an appeal route for automated identity checks.\n"
+    }
+  ],
+  "claims": [
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c1",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Data provenance",
+      "kind": "exclusion",
+      "polarity": "denied",
+      "subject": "exclusion",
+      "quote": "We do not train on ticket bodies",
+      "span": {
+        "byteStart": 220,
+        "byteEnd": 252,
+        "line": 7,
+        "column": 54
+      },
+      "cues": [
+        "exclusion.do-not"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "obligationCode": "Art. 10(5)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c2",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Retention",
+      "kind": "retention",
+      "polarity": "affirmed",
+      "subject": "retention",
+      "quote": "We retain ticket transcripts for 400 days.",
+      "span": {
+        "byteStart": 290,
+        "byteEnd": 332,
+        "line": 12,
+        "column": 1
+      },
+      "cues": [
+        "commitment.retain"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "obligationCode": "Art. 11(1)(e)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c3",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Retention",
+      "kind": "retention",
+      "polarity": "affirmed",
+      "subject": "retention",
+      "quote": "Retention period for audit logs is 400 days.",
+      "span": {
+        "byteStart": 333,
+        "byteEnd": 377,
+        "line": 12,
+        "column": 44
+      },
+      "cues": [
+        "commitment.retention-period"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "obligationCode": "Art. 11(1)(e)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c4",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Human oversight",
+      "kind": "oversight",
+      "polarity": "affirmed",
+      "subject": "human review",
+      "quote": "Human review is available on request for any classification a customer disputes.",
+      "span": {
+        "byteStart": 399,
+        "byteEnd": 479,
+        "line": 16,
+        "column": 1
+      },
+      "cues": [
+        "oversight.human-review"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+      "obligationCode": "Art. 14(1)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c5",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Human oversight",
+      "kind": "commitment",
+      "polarity": "affirmed",
+      "subject": "review",
+      "quote": "We review monthly samples for consistency.",
+      "span": {
+        "byteStart": 480,
+        "byteEnd": 522,
+        "line": 17,
+        "column": 1
+      },
+      "cues": [
+        "commitment.review"
+      ],
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "obligationId": "EU-ART-14-OVERRIDE",
+      "obligationCode": "Art. 14(4)(e)",
+      "reason": {
+        "code": "EVIDENCE_SHORTFALL",
+        "detail": "'the oversight person must be able to stop the system or override its output' needs 1 document artifact(s); 0 on record"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c6",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Consent and redress",
+      "kind": "redress",
+      "polarity": "affirmed",
+      "subject": "appeal",
+      "quote": "An appeal is available for 60 days.",
+      "span": {
+        "byteStart": 548,
+        "byteEnd": 583,
+        "line": 21,
+        "column": 1
+      },
+      "cues": [
+        "oversight.appeal"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-15-APPEAL",
+      "obligationCode": "Art. 15(1)(h)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c7",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Consent and redress",
+      "kind": "consent",
+      "polarity": "affirmed",
+      "subject": "consent",
+      "quote": "Consent is required before a transcript is used for",
+      "span": {
+        "byteStart": 584,
+        "byteEnd": 635,
+        "line": 21,
+        "column": 37
+      },
+      "cues": [
+        "oversight.consent"
+      ],
+      "verdict": "unbacked",
+      "severity": "major",
+      "obligationId": null,
+      "obligationCode": null,
+      "reason": {
+        "code": "NO_OBLIGATION_MATCHES",
+        "detail": "a consent claim about 'consent' is not governed by any obligation in the register"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c8",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Accountability",
+      "kind": "accountability",
+      "polarity": "affirmed",
+      "subject": "audit trail",
+      "quote": "An audit trail of every classification is available to the internal audit team.",
+      "span": {
+        "byteStart": 666,
+        "byteEnd": 745,
+        "line": 26,
+        "column": 1
+      },
+      "cues": [
+        "accountability.audit-trail"
+      ],
+      "verdict": "supported",
+      "severity": "major",
+      "obligationId": "NIST-MANAGE-4.1",
+      "obligationCode": "MANAGE 4.1",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c9",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Fairness",
+      "kind": "commitment",
+      "polarity": "affirmed",
+      "subject": "monitoring",
+      "quote": "We monitor subgroup disparity across language, region and account age.",
+      "span": {
+        "byteStart": 760,
+        "byteEnd": 830,
+        "line": 30,
+        "column": 1
+      },
+      "cues": [
+        "commitment.monitor",
+        "metric.subgroup"
+      ],
+      "verdict": "unevidenced",
+      "severity": "major",
+      "obligationId": "EU-ART-14-DRIFT",
+      "obligationCode": "Art. 14(4)(b)",
+      "reason": {
+        "code": "EVIDENCE_SHORTFALL",
+        "detail": "\"oversight must cover the system's accuracy and drift\" needs 1 document artifact(s); 0 on record"
+      }
+    },
+    {
+      "id": "northwind-fairness-policy-cbe85d6003#c10",
+      "parentId": null,
+      "depth": 2,
+      "section": "Northwind Support â€” Fairness and Access Policy › Transparency",
+      "kind": "transparency",
+      "polarity": "affirmed",
+      "subject": "interpretability",
+      "quote": "Interpretability is not currently available to customers; we document this limitation.",
+      "span": {
+        "byteStart": 849,
+        "byteEnd": 935,
+        "line": 34,
+        "column": 1
+      },
+      "cues": [
+        "transparency.interpretability"
+      ],
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "obligationId": "EU-ART-86-EXPLANATION",
+      "obligationCode": "Art. 86",
+      "reason": {
+        "code": "EVIDENCE_SHORTFALL",
+        "detail": "'affected persons must receive a clear explanation of the role of the system in the decision' needs 1 document artifact(s); 0 on record"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c1",
+      "parentId": null,
+      "depth": 1,
+      "section": "Meridian Lending â€” System Card",
+      "kind": "disclosure",
+      "polarity": "affirmed",
+      "subject": "disclosure",
+      "quote": "We publish the decision",
+      "span": {
+        "byteStart": 103,
+        "byteEnd": 126,
+        "line": 3,
+        "column": 63
+      },
+      "cues": [
+        "disclosure.publish"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-10-DATA-GOV",
+      "obligationCode": "Art. 10",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c2",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Data and training",
+      "kind": "exclusion",
+      "polarity": "denied",
+      "subject": "Data sources are listed in appendix A.",
+      "quote": "Data sources are listed in appendix A. We never train on applicant-uploaded documents.",
+      "span": {
+        "byteStart": 189,
+        "byteEnd": 275,
+        "line": 8,
+        "column": 3
+      },
+      "cues": [
+        "exclusion.never"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "obligationCode": "Art. 10(5)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c3",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Data and training",
+      "kind": "retention",
+      "polarity": "affirmed",
+      "subject": "retention",
+      "quote": "We retain application events for 2555 days.",
+      "span": {
+        "byteStart": 278,
+        "byteEnd": 321,
+        "line": 9,
+        "column": 3
+      },
+      "cues": [
+        "commitment.retain"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "obligationCode": "Art. 11(1)(e)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c4",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Human oversight",
+      "kind": "oversight",
+      "polarity": "affirmed",
+      "subject": "human review",
+      "quote": "Human review is available for every adverse decision within two business days.",
+      "span": {
+        "byteStart": 343,
+        "byteEnd": 421,
+        "line": 13,
+        "column": 1
+      },
+      "cues": [
+        "oversight.human-review"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+      "obligationCode": "Art. 14(1)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c5",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Human oversight",
+      "kind": "commitment",
+      "polarity": "affirmed",
+      "subject": "monitoring",
+      "quote": "We monitor override rates monthly.",
+      "span": {
+        "byteStart": 422,
+        "byteEnd": 456,
+        "line": 14,
+        "column": 1
+      },
+      "cues": [
+        "commitment.monitor"
+      ],
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "obligationId": "EU-ART-14-OVERRIDE",
+      "obligationCode": "Art. 14(4)(e)",
+      "reason": {
+        "code": "EVIDENCE_SHORTFALL",
+        "detail": "'the oversight person must be able to stop the system or override its output' needs 1 document artifact(s); 0 on record"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c6",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Redress",
+      "kind": "redress",
+      "polarity": "affirmed",
+      "subject": "appeal",
+      "quote": "An appeal is available for 30 days after a decision.",
+      "span": {
+        "byteStart": 470,
+        "byteEnd": 522,
+        "line": 18,
+        "column": 1
+      },
+      "cues": [
+        "oversight.appeal"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-15-APPEAL",
+      "obligationCode": "Art. 15(1)(h)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c7",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Redress",
+      "kind": "redress",
+      "polarity": "affirmed",
+      "subject": "opt-out",
+      "quote": "Opt out is available in settings.",
+      "span": {
+        "byteStart": 523,
+        "byteEnd": 556,
+        "line": 18,
+        "column": 54
+      },
+      "cues": [
+        "oversight.opt-out"
+      ],
+      "verdict": "supported",
+      "severity": "major",
+      "obligationId": "NIST-MANAGE-2.2",
+      "obligationCode": "MANAGE 2.2",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "1 document artifact(s) on record, 1 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c8",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Transparency",
+      "kind": "transparency",
+      "polarity": "affirmed",
+      "subject": "explainability",
+      "quote": "Explainability is available as a per-decision reason code.",
+      "span": {
+        "byteStart": 575,
+        "byteEnd": 633,
+        "line": 22,
+        "column": 1
+      },
+      "cues": [
+        "transparency.explainability"
+      ],
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "obligationId": "EU-ART-86-EXPLANATION",
+      "obligationCode": "Art. 86",
+      "reason": {
+        "code": "EVIDENCE_SHORTFALL",
+        "detail": "'affected persons must receive a clear explanation of the role of the system in the decision' needs 1 document artifact(s); 0 on record"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c9",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Transparency",
+      "kind": "metric",
+      "polarity": "affirmed",
+      "subject": "measurement",
+      "quote": "We measure subgroup disparity",
+      "span": {
+        "byteStart": 634,
+        "byteEnd": 663,
+        "line": 22,
+        "column": 60
+      },
+      "cues": [
+        "metric.subgroup",
+        "performance.measure"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-9-METRICS",
+      "obligationCode": "Art. 9(8)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "4 document artifact(s) on record, 2 required"
+      }
+    },
+    {
+      "id": "meridian-system-card-7eddbf4fcb#c10",
+      "parentId": "meridian-system-card-7eddbf4fcb#c1",
+      "depth": 2,
+      "section": "Meridian Lending â€” System Card › Known limitations",
+      "kind": "exclusion",
+      "polarity": "denied",
+      "subject": "exclusion",
+      "quote": "We do not offer an appeal route for automated identity checks.",
+      "span": {
+        "byteStart": 708,
+        "byteEnd": 770,
+        "line": 27,
+        "column": 1
+      },
+      "cues": [
+        "exclusion.do-not",
+        "oversight.appeal"
+      ],
+      "verdict": "supported",
+      "severity": "blocker",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "obligationCode": "Art. 10(5)",
+      "reason": {
+        "code": "EVIDENCE_SUFFICIENT",
+        "detail": "2 document artifact(s) on record, 1 required"
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c1",
+      "obligationId": "EU-ART-10-DATA-GOV",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c10",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c2",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c3",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c4",
+      "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c5",
+      "obligationId": "EU-ART-14-OVERRIDE",
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SHORTFALL",
+          "detail": "'the oversight person must be able to stop the system or override its output' needs 1 document artifact(s); 0 on record"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c6",
+      "obligationId": "EU-ART-15-APPEAL",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c7",
+      "obligationId": "NIST-MANAGE-2.2",
+      "verdict": "supported",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c8",
+      "obligationId": "EU-ART-86-EXPLANATION",
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SHORTFALL",
+          "detail": "'affected persons must receive a clear explanation of the role of the system in the decision' needs 1 document artifact(s); 0 on record"
+        }
+      ]
+    },
+    {
+      "claimId": "meridian-system-card-7eddbf4fcb#c9",
+      "obligationId": "EU-ART-9-METRICS",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "4 document artifact(s) on record, 2 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c1",
+      "obligationId": "EU-ART-10-NO-SPECIAL-CATEGORY",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c10",
+      "obligationId": "EU-ART-86-EXPLANATION",
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SHORTFALL",
+          "detail": "'affected persons must receive a clear explanation of the role of the system in the decision' needs 1 document artifact(s); 0 on record"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c2",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c3",
+      "obligationId": "EU-ART-11-RECORD-KEEPING",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c4",
+      "obligationId": "EU-ART-14-HUMAN-OVERSIGHT",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c5",
+      "obligationId": "EU-ART-14-OVERRIDE",
+      "verdict": "unevidenced",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SHORTFALL",
+          "detail": "'the oversight person must be able to stop the system or override its output' needs 1 document artifact(s); 0 on record"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c6",
+      "obligationId": "EU-ART-15-APPEAL",
+      "verdict": "supported",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "2 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c7",
+      "obligationId": null,
+      "verdict": "unbacked",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_OBLIGATION_MATCHES",
+          "detail": "a consent claim about 'consent' is not governed by any obligation in the register"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c8",
+      "obligationId": "NIST-MANAGE-4.1",
+      "verdict": "supported",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SUFFICIENT",
+          "detail": "1 document artifact(s) on record, 1 required"
+        }
+      ]
+    },
+    {
+      "claimId": "northwind-fairness-policy-cbe85d6003#c9",
+      "obligationId": "EU-ART-14-DRIFT",
+      "verdict": "unevidenced",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "EVIDENCE_SHORTFALL",
+          "detail": "\"oversight must cover the system's accuracy and drift\" needs 1 document artifact(s); 0 on record"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-11-TECH-DOC",
+      "verdict": "unmet",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'technical documentation must exist before the system is placed on the market'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-12-RECORD-KEEPING-PERIOD",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the retention period for logs must be stated and bounded'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-13-TRANSPARENCY",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses \"instructions for use must disclose the system's capabilities and limitations\""
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-26-DEPLOYER-DUTY",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'a deployer must assign human oversight to competent, trained and resourced persons'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-27-FUNDAMENTAL-RIGHTS",
+      "verdict": "unmet",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'a fundamental-rights impact assessment must accompany the deployment'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "EU-ART-9-RISK-MGMT",
+      "verdict": "unmet",
+      "severity": "blocker",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'risk management must be continuous across the system lifecycle'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-GOV-1.1",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the organisation must publish the policies, processes and accountability structures for AI risk'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-GOV-3.2",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'a policy must require the documentation of the provenance of training data'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-GOV-4.1",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the organisation must audit the accountability structures it claims to have'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MANAGE-2.3",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the organisation must decide and document retention for the records it keeps'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MANAGE-2.4",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the organisation must monitor deployed systems for drift and unexpected behaviour'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MAP-1.1",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the intended purpose and the context of use must be documented'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MAP-2.3",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'scientific integrity requires that system limitations be disclosed, not omitted'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MEASURE-2.11",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'explainability must be evaluated for the intended audience, not merely implemented'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MEASURE-2.5",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'the organisation must document that evaluation methods are appropriate to the stated risk'"
+        }
+      ]
+    },
+    {
+      "claimId": null,
+      "obligationId": "NIST-MEASURE-2.7",
+      "verdict": "unmet",
+      "severity": "major",
+      "reasons": [
+        {
+          "code": "NO_CLAIM_ADDRESSES_OBLIGATION",
+          "detail": "nothing in the documents addresses 'fairness assessment must be documented for affected populations'"
+        }
+      ]
+    }
+  ]
+}

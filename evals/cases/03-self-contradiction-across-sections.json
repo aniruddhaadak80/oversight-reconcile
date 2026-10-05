@@ -1,0 +1,33 @@
+{
+  "name": "self-contradiction-across-sections",
+  "why": "A document that affirms a duty in one section and denies it in another is stating something false about itself. One pinned obligation must catch both sides.",
+  "document": "# Support Policy\n\n## Data\n\nWe retain ticket transcripts for 400 days.\n\n## Retention\n\nWe never retain ticket transcripts after the case closes.\n",
+  "obligations": [
+    {
+      "id": "O-RETENTION",
+      "code": "Art. 12",
+      "source": "EU AI Act",
+      "statement": "log retention must be declared and bounded",
+      "kind": "any",
+      "cues": ["commitment.retain", "exclusion.never"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "blocker"
+    }
+  ],
+  "evidence": [],
+  "expect": {
+    "claimCount": 2,
+    "byVerdict": { "contradicted": 2, "unmet": 0 },
+    "claims": {
+      "We retain ticket transcripts for 400 days": {
+        "kind": "retention",
+        "polarity": "affirmed"
+      },
+      "We never retain ticket transcripts": {
+        "kind": "exclusion",
+        "polarity": "denied"
+      }
+    }
+  }
+}

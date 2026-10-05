@@ -1,0 +1,32 @@
+{
+  "name": "@oversightreconcile/sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@oversightreconcile/core": "0.1.0",
+    "@oversightreconcile/skills": "0.1.0",
+    "@oversightreconcile/plugins": "0.1.0",
+    "@oversightreconcile/channels": "0.1.0",
+    "@oversightreconcile/providers": "0.1.0",
+    "@oversightreconcile/memory": "0.1.0"
+  }
+}

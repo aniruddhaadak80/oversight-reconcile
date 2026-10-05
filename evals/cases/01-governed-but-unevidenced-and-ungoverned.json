@@ -1,0 +1,37 @@
+{
+  "name": "governed-but-unevidenced-and-ungoverned",
+  "why": "Two claims from the same document end in different states: one an obligation happens to govern (so it is merely unevidenced), and one no obligation governs at all (so it is unbacked). Collapsing those two states is how a checklist review passes a document it never checked.",
+  "document": "# Vendor Card\n\n## Claims\n\nWe ensure that all vendor scoring is reproducible.\nWe monitor vendor drift quarterly.\n",
+  "obligations": [
+    {
+      "id": "O-RETENTION",
+      "code": "Art. 12",
+      "source": "EU AI Act",
+      "statement": "log retention must be declared and bounded",
+      "kind": "retention",
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    }
+  ],
+  "evidence": [],
+  "expect": {
+    "claimCount": 2,
+    "byVerdict": { "unbacked": 1, "unevidenced": 1, "unmet": 0, "supported": 0, "contradicted": 0 },
+    "claims": {
+      "all vendor scoring is reproducible": {
+        "kind": "assurance",
+        "polarity": "affirmed",
+        "subject": "assurance",
+        "line": 5,
+        "column": 1
+      },
+      "vendor drift quarterly": {
+        "kind": "commitment",
+        "polarity": "affirmed",
+        "subject": "monitoring",
+        "line": 6
+      }
+    }
+  }
+}

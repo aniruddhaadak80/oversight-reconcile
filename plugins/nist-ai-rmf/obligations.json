@@ -1,0 +1,139 @@
+{
+  "framework": "NIST AI RMF 1.0",
+  "version": "1.0.0",
+  "description": "Machine-checkable reading of the subcategory outcomes an organisation must be able to evidence. NIST's framework is advisory rather than binding, so every severity here is a major at most and no obligation in this pack blocks on its own.",
+  "obligations": [
+    {
+      "id": "NIST-GOV-1.1",
+      "code": "GOVERN 1.1",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must publish the policies, processes and accountability structures for AI risk",
+      "kind": "disclosure",
+      "cues": ["disclosure.publish", "disclosure.documented"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-GOV-3.2",
+      "code": "GOVERN 3.2",
+      "source": "NIST AI RMF",
+      "statement": "a policy must require the documentation of the provenance of training data",
+      "kind": "disclosure",
+      "cues": ["disclosure.documented", "disclosure.publish"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-GOV-4.1",
+      "code": "GOVERN 4.1",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must audit the accountability structures it claims to have",
+      "kind": "commitment",
+      "cues": ["commitment.audit", "commitment.review"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MAP-1.1",
+      "code": "MAP 1.1",
+      "source": "NIST AI RMF",
+      "statement": "the intended purpose and the context of use must be documented",
+      "kind": "disclosure",
+      "cues": ["disclosure.documented", "disclosure.publish"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MAP-2.3",
+      "code": "MAP 2.3",
+      "source": "NIST AI RMF",
+      "statement": "scientific integrity requires that system limitations be disclosed, not omitted",
+      "kind": "disclosure",
+      "cues": ["disclosure.disclose", "disclosure.publish"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MEASURE-2.5",
+      "code": "MEASURE 2.5",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must document that evaluation methods are appropriate to the stated risk",
+      "kind": "metric",
+      "cues": ["performance.measure", "performance.accuracy"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MEASURE-2.7",
+      "code": "MEASURE 2.7",
+      "source": "NIST AI RMF",
+      "statement": "fairness assessment must be documented for affected populations",
+      "kind": "fairness",
+      "cues": ["fairness.fairness", "fairness.bias", "metric.subgroup"],
+      "evidenceRequired": 2,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MEASURE-2.11",
+      "code": "MEASURE 2.11",
+      "source": "NIST AI RMF",
+      "statement": "explainability must be evaluated for the intended audience, not merely implemented",
+      "kind": "transparency",
+      "cues": ["transparency.explainability", "transparency.interpretability"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MANAGE-2.2",
+      "code": "MANAGE 2.2",
+      "source": "NIST AI RMF",
+      "statement": "mechanisms for user recourse must be planned, documented and available",
+      "kind": "redress",
+      "cues": ["oversight.appeal", "oversight.opt-out"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MANAGE-2.4",
+      "code": "MANAGE 2.4",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must monitor deployed systems for drift and unexpected behaviour",
+      "kind": "commitment",
+      "cues": ["commitment.monitor", "performance.accuracy"],
+      "evidenceRequired": 1,
+      "evidenceKind": "run",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MANAGE-4.1",
+      "code": "MANAGE 4.1",
+      "source": "NIST AI RMF",
+      "statement": "post-deployment monitoring must be recorded in an auditable log",
+      "kind": "accountability",
+      "cues": ["accountability.audit-log", "accountability.audit-trail", "commitment.audit"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    },
+    {
+      "id": "NIST-MANAGE-2.3",
+      "code": "MANAGE 2.3",
+      "source": "NIST AI RMF",
+      "statement": "the organisation must decide and document retention for the records it keeps",
+      "kind": "retention",
+      "cues": ["commitment.retain", "commitment.retention", "commitment.retention-period"],
+      "evidenceRequired": 1,
+      "evidenceKind": "document",
+      "severity": "major"
+    }
+  ]
+}
