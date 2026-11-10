@@ -92,6 +92,12 @@ updates:
   - dependency-name: '@eslint/js'
     update-types:
     - version-update:semver-major
+- dependency-name: commander
+    update-types:
+    - version-update:semver-major
+- dependency-name: eslint-plugin-react-hooks
+    update-types:
+    - version-update:semver-major
 - package-ecosystem: pip
   directory: /services/engine
   schedule:
