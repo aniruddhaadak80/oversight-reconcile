@@ -2,7 +2,7 @@
   "name": "oversight-reconcile",
   "version": "0.1.0",
   "private": true,
-  "description": "Oversight Reconcile Ã¢â‚¬â€ A self-hosted agent product with a deterministic core.",
+  "description": "Oversight Reconcile \u00c3\u00a2\u00e2\u201a\u00ac\u00e2\u20ac\u009d A self-hosted agent product with a deterministic core.",
   "license": "MIT",
   "author": "aniruddhaadak80",
   "repository": {
@@ -16,8 +16,8 @@
   "type": "module",
   "packageManager": "npm@11.21.0",
   "engines": {
-    "node": "\u003e=22.12.0",
-    "npm": "\u003e=10"
+    "node": ">=22.12.0",
+    "npm": ">=10"
   },
   "allowScripts": {
     "better-sqlite3": true,
@@ -71,6 +71,6 @@
     "turbo": "^2.11.11",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.72.2",
-    "vitest": "^3.2.4"
+    "vitest": "4.1.11"
   }
 }
