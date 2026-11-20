@@ -88,6 +88,6 @@
     "@opentelemetry/propagator-jaeger": "2.9.0",
     "markdown-it": "14.3.3",
     "source-map-js": "1.2.2",
-    "minimatch": "11.1.0"
+    "minimatch": "11.0.9"
   }
 }
